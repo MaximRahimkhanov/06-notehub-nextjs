@@ -10,7 +10,6 @@ type NoteListProps = {
 
 export function NoteList({ data }: NoteListProps) {
   const queryClient = useQueryClient();
-  console.log(data);
 
   const { mutate } = useMutation({
     mutationFn: (noteId: string) => deleteNote(noteId),
